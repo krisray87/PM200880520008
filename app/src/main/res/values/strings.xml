@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">PM200880520008</string>
+    <string name="guardar">Salvar Contacto</string>
+    <string name="contactos">Contactos Salvados</string>
+</resources>
