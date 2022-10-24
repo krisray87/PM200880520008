@@ -36,6 +36,7 @@ public class ListaContactos extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent = new Intent(getApplicationContext(),MainActivity.class);
                 startActivity(intent);
+
             }
         });
         listacontact = (ListView) findViewById(R.id.listacontact);
