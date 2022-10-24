@@ -1,16 +1,26 @@
 package com.example.pm200880520008.tablas;
 
 public class contactos {
+    public Integer id;
     public String pais;
     public String nombre;
     public String telefono;
     public String nota;
 
+    public Integer getId() {
+        return id;
+    }
+
+    public void setId(Integer id) {
+        this.id = id;
+    }
+
     public contactos(){
 
     }
 
-    public contactos(String pais, String nombre, String telefono, String nota) {
+    public contactos(Integer id,String pais, String nombre, String telefono, String nota) {
+        this.id = id;
         this.pais = pais;
         this.nombre = nombre;
         this.telefono = telefono;

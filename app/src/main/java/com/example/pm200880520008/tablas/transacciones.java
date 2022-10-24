@@ -16,5 +16,9 @@ public class transacciones {
             "pais TEXT,nombre TEXT,telefono TEXT, nota TEXT)";
 
     public static final String droptcontactos = "DROP TABLE IF EXIST contactos";
+    public static final String getContactos = "SELECT * FROM "+transacciones.Tcontactos
+
+
+            ;
 
 }

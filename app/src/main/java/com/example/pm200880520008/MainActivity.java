@@ -4,6 +4,7 @@ import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.ContentValues;
+import android.content.Intent;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.view.View;
@@ -45,6 +46,13 @@ public class MainActivity extends AppCompatActivity {
                 AgregarContacto();
             }
         });
+        ver.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(),ListaContactos.class);
+                startActivity(intent);
+            }
+        });
     }
 
     private void AgregarContacto() {
@@ -78,8 +86,8 @@ public class MainActivity extends AppCompatActivity {
         valores.put(transacciones.telefono, telefono.getText().toString());
         valores.put(transacciones.nota, nota.getText().toString());
 
-        Long resultado = db.insert(transacciones.cTcontactos,transacciones.id,valores);
-        Toast.makeText(this, "Contacto guardado con exito", Toast.LENGTH_SHORT).show();
+        Long resultado = db.insert(transacciones.Tcontactos,transacciones.id,valores);
+        Toast.makeText(this, "Contacto guardado con exito" + resultado.toString(), Toast.LENGTH_SHORT).show();
         db.close();
         Limpiar();
     }
